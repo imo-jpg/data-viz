@@ -14,3 +14,11 @@ text {
     font-family: IBM Plex Mono, monospace;
     font-size: 12px;
 }
+
+.button {
+    padding: 5px;
+    text-align: center;
+    background: #aaafff;
+    font-family: IBM Plex Mono, monospace;
+    font-size: 12px;
+}

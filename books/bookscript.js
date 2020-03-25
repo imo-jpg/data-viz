@@ -1,4 +1,4 @@
-const w = 1000;
+const w = 1200;
 const h = 550;
 const padding = 20;
 
@@ -24,15 +24,17 @@ var line = d3.select("svg")
 const formatYear = d3.timeFormat("%y");
 
 d3.csv("books.csv").then(function(data) {
-    dataset = data;
-
-    var rating = function(d) {return 2 * d.Rating;};
+    // console.log(data[2].Pages);
+    // console.log(d3.min(data, function(d) { return parseInt(d.Pages); }));
+    // console.log(d3.max(data, function(d) { return parseInt(d.Pages); }));
     
-    xScale = d3.scaleTime()
+    xScale = d3.scaleLinear()
         .domain([
-            d3.min(data, function(d) { return d.YearWritten; }),
-            d3.max(data, function(d) { return d.YearWritten; }) ])
+            d3.min(data, function(d) { return parseInt(d.Pages); }),
+            d3.max(data, function(d) { return parseInt(d.Pages); }) ])
         .range([padding, w - 4*padding]);
+        // .domain([80, 1030])
+        // .range([padding, w - 4*padding]);
     
     yScale = d3.scaleLinear()
         .domain([
@@ -46,10 +48,11 @@ d3.csv("books.csv").then(function(data) {
     //     .range([0, 100]);
 
     xAxis = d3.axisBottom()
-        .scale(xScale).tickFormat(d3.format("d"));
+        .scale(xScale)
+        .tickFormat(d3.format(10));
 
     svg.append("g")
-        .attr("class", "axis")
+        .attr("class", "xaxis")
         // .attr("transform", "translate(0," + (h - padding) + ")")
         .attr("transform", "translate(" + (2*padding) + "," + (h-padding) + ")")
         .call(xAxis);
@@ -58,7 +61,7 @@ d3.csv("books.csv").then(function(data) {
         .scale(yScale);
 
     svg.append("g")
-        .attr("class", "axis")
+        .attr("class", "yaxis")
         .attr("transform", "translate(" + (2 * padding) + ", 0)")
         .call(yAxis);       
 
@@ -66,9 +69,10 @@ d3.csv("books.csv").then(function(data) {
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function(d) {return (2*padding) + xScale(d.YearWritten);})
+        .attr("cx", function(d) {return (d.Pages);})
         .attr("cy", function(d) {return yScale((d.Rating)*2);})
-        .attr("r", function(d) {return (d.Pages)/35})
+        // .attr("r", function(d) {return (d.Pages)/35})
+        .attr("r", 10)    
         .attr("opacity", .75)
         .attr("fill", function(d) {
             if ((d.AuthorGender) == "M") {return "#0f62fe";}
@@ -100,5 +104,29 @@ d3.csv("books.csv").then(function(data) {
         })
         ;
 
+    var button = d3.select("body").append("div")
+        .attr("class", "button")
+        .append("text")
+        .text("toggle view")
+        .on("click", reScale);
+
+    function reScale() {
+        console.log("done");
+        xScale.domain([
+                    d3.min(data, function(d) { return parseInt(d.YearWritten); }),
+                    d3.max(data, function(d) { return parseInt(d.YearWritten); }) ])
+                .range([padding, w - 4*padding]);
+        svg.select(".xaxis")
+            .transition(500)
+            .call(xAxis);
+        
+        svg.selectAll("circle")
+            .transition(500)
+            .attr("cx", function(d) {return (2*padding) + xScale(d.YearWritten);})
+            ;
+        
+    };
+
 });
+
 
