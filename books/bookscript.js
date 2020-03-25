@@ -8,12 +8,12 @@ d3.select("body")
     .attr("height", h)
     .attr("width", w);
 
-var div = d3.select("body")
+const div = d3.select("body")
             .append("div")
             .attr("opacity", 0)
             .attr("class", "tooltip");
 
-var line = d3.select("svg")
+const line = d3.select("svg")
             .append("line")
             .attr("x1", 2*padding)
             .attr("x2", w-padding)
@@ -23,15 +23,25 @@ var line = d3.select("svg")
 
 const formatYear = d3.timeFormat("%y");
 
+
 d3.csv("books.csv").then(function(data) {
     // console.log(data[2].Pages);
     // console.log(d3.min(data, function(d) { return parseInt(d.Pages); }));
     // console.log(d3.max(data, function(d) { return parseInt(d.Pages); }));
     
+    let toggleValue = true;
+
+    function toggleSwitch(d, toggleValue) {
+        if (toggleValue) {
+            return parseInt(d.Pages);
+        } else { return parseInt(d.YearWritten); }
+    };
+
     xScale = d3.scaleLinear()
         .domain([
-            d3.min(data, function(d) { return parseInt(d.Pages); }),
-            d3.max(data, function(d) { return parseInt(d.Pages); }) ])
+            d3.min(data, toggleSwitch(toggleValue)),
+            d3.max(data, toggleSwitch(toggleValue))
+        ])
         .range([padding, w - 4*padding]);
         // .domain([80, 1030])
         // .range([padding, w - 4*padding]);
@@ -104,25 +114,31 @@ d3.csv("books.csv").then(function(data) {
         })
         ;
 
-    var button = d3.select("body").append("div")
+    const button = d3.select("body").append("div")
         .attr("class", "button")
         .append("text")
         .text("toggle view")
         .on("click", reScale);
 
     function reScale() {
-        console.log("done");
+
+        console.log(toggleValue);
+
+        toggleValue = !toggleValue;
+
+        console.log(toggleValue);
+
         xScale.domain([
-                    d3.min(data, function(d) { return parseInt(d.YearWritten); }),
-                    d3.max(data, function(d) { return parseInt(d.YearWritten); }) ])
+                    d3.min(data, toggleSwitch(toggleValue)),
+                    d3.max(data, toggleSwitch(toggleValue)) ])
                 .range([padding, w - 4*padding]);
         svg.select(".xaxis")
             .transition(500)
             .call(xAxis);
         
         svg.selectAll("circle")
-            .transition(500)
-            .attr("cx", function(d) {return (2*padding) + xScale(d.YearWritten);})
+            .transition().ease(d3.easeBounceOut)
+            .attr("cx", function(d) {return (2*padding) + xScale(toggleSwitch(toggleValue));})
             ;
         
     };
