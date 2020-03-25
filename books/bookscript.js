@@ -1,6 +1,14 @@
-const w = 1200;
+const w = 1100;
 const h = 550;
 const padding = 20;
+
+let words = "arrange by year";
+
+const button = d3.select("body").append("div")
+    .attr("class", "button")
+    .append("text")
+    .text(words)
+    .on("click", reScale);
 
 const svg =
 d3.select("body")
@@ -23,24 +31,27 @@ const line = d3.select("svg")
 
 const formatYear = d3.timeFormat("%y");
 
+let toggleValue = true;
+
+
+function toggleSwitch(d, toggleValue) {
+    if (toggleValue) {
+        words = "arrange by year";
+        return parseInt(d.Pages);
+    } else { 
+        words = "arrange by pages";
+        return parseInt(d.YearWritten);
+    }
+};
 
 d3.csv("books.csv").then(function(data) {
-    // console.log(data[2].Pages);
-    // console.log(d3.min(data, function(d) { return parseInt(d.Pages); }));
-    // console.log(d3.max(data, function(d) { return parseInt(d.Pages); }));
-    
-    let toggleValue = true;
 
-    function toggleSwitch(d, toggleValue) {
-        if (toggleValue) {
-            return parseInt(d.Pages);
-        } else { return parseInt(d.YearWritten); }
-    };
+    dataset = data;
 
     xScale = d3.scaleLinear()
         .domain([
-            d3.min(data, toggleSwitch(toggleValue)),
-            d3.max(data, toggleSwitch(toggleValue))
+            d3.min(data, function(d) { return toggleSwitch(d, toggleValue);} ),
+            d3.max(data, function(d) { return toggleSwitch(d, toggleValue);} )
         ])
         .range([padding, w - 4*padding]);
         // .domain([80, 1030])
@@ -81,8 +92,8 @@ d3.csv("books.csv").then(function(data) {
         .append("circle")
         .attr("cx", function(d) {return (d.Pages);})
         .attr("cy", function(d) {return yScale((d.Rating)*2);})
-        // .attr("r", function(d) {return (d.Pages)/35})
-        .attr("r", 10)    
+        .attr("r", function(d) {return parseInt(d.Pages)/35})
+        // .attr("r", 10)    
         .attr("opacity", .75)
         .attr("fill", function(d) {
             if ((d.AuthorGender) == "M") {return "#0f62fe";}
@@ -114,35 +125,33 @@ d3.csv("books.csv").then(function(data) {
         })
         ;
 
-    const button = d3.select("body").append("div")
-        .attr("class", "button")
-        .append("text")
-        .text("toggle view")
-        .on("click", reScale);
 
-    function reScale() {
-
-        console.log(toggleValue);
-
-        toggleValue = !toggleValue;
-
-        console.log(toggleValue);
-
-        xScale.domain([
-                    d3.min(data, toggleSwitch(toggleValue)),
-                    d3.max(data, toggleSwitch(toggleValue)) ])
-                .range([padding, w - 4*padding]);
-        svg.select(".xaxis")
-            .transition(500)
-            .call(xAxis);
-        
-        svg.selectAll("circle")
-            .transition().ease(d3.easeBounceOut)
-            .attr("cx", function(d) {return (2*padding) + xScale(toggleSwitch(toggleValue));})
-            ;
-        
-    };
 
 });
 
 
+
+function reScale() {
+
+console.log(toggleValue);
+
+toggleValue = !toggleValue;
+
+console.log(toggleValue);
+
+xScale.domain([
+            d3.min(dataset, function(d) { return toggleSwitch(d, toggleValue);} ),
+            d3.max(dataset, function(d) { return toggleSwitch(d, toggleValue);} ) ])
+        .range([padding, w - 4*padding]);
+svg.select(".xaxis")
+    .transition(500)
+    .call(xAxis);
+
+svg.selectAll("circle")
+    .transition().ease(d3.easeBounceOut)
+    .attr("cx", function(d) {return (2*padding) + xScale(toggleSwitch(d, toggleValue));})
+    ;
+
+button.text(words);
+
+};

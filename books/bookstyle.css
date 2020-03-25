@@ -16,11 +16,12 @@ text {
 }
 
 .button {
-    padding: 5px;
-    top: 20px;
-    left: 40px;
+    display: block;
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    position: relative;
     text-align: center;
-    background: #aaafff;
     font-family: IBM Plex Mono, monospace;
     font-size: 12px;
 }
