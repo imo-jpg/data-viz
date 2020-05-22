@@ -1,0 +1,112 @@
+Ident,YearRead,Book,Author,Rating,YearWritten,AuthorGender,Pages,Type,Origin,Where
+1,2017,Snow Crash,Neal Stephenson,2,1992,M,480,Fiction,borrowed,person
+2,2017,Das Fliegende Klassenzimmer,Erich Kaestner,3.5,1933,M,176,Fiction,mine,gift
+3,2017,The Unknown Huntsman,Jean-Michel-Fortier,1.5,2014,M,162,Fiction,borrowed,library
+4,2017,Transition,Iain M Banks,4,2009,M,404,Fiction,borrowed,person
+5,2017,Dear Mr. M,Herman Koch,3,2014,M,400,Fiction,borrowed,library
+6,2017,Poisonwood Bible,Barbara Kingsolver,5,1998,F,546,Fiction,borrowed,person
+7,2017,Look at Me,Jennifer Egan,3.5,2001,F,417,Fiction,mine,bought
+8,2017,The Left Hand of Darkness,Ursula K. Le Guin,3,1969,F,304,Fiction,borrowed,person
+9,2017,Vampires in the Lemon Grove,Karen Russell,3,2013,F,243,Short Stories,mine,bought
+10,2017,NW,Zadie Smith,2.5,2012,F,296,Fiction,mine,bought
+11,2017,The Song of Achilles,Madeline Miller,3.5,2011,F,352,Fiction,mine,bought
+12,2017,Americanah,Chimamanda Ngozi Adichie,3.5,2013,F,477,Fiction,mine,bought
+13,2017,My Absolute Darling,Gabriel Tallent,3,2017,M,417,Fiction,borrowed,person
+14,2017,Beyond Black,Hilary Mantel,2,2005,F,432,Fiction,borrowed,library
+15,2017,Alone in Berlin,Hans Fallada,4,1947,M,668,Fiction,borrowed,library
+16,2017,The Narrow Road to the Deep North,Richard Flanagan,4,2013,M,467,Fiction,mine,bought
+17,2017,The Last Werewolf,Glen Duncan,3,2011,M,353,Fiction,borrowed,library
+18,2017,The Sense of and Ending,Julian Barnes,4.5,2011,M,150,Fiction,borrowed,library
+19,2017,The Yiddish Policeman's Union,Michael Chabon,5,2007,M,414,Fiction,borrowed,library
+20,2017,Middlesex,Jeffrey Eugenides,3.5,2002,M,529,Fiction,borrorwed,person
+21,2017,Exit West,Mohsin Hamid,3,2017,M,231,Fiction,mine,gift
+22,2018,Commonwealth,Ann Patchett,3.5,2016,F,322,Fiction,borrowed,library
+23,2018,Dance Dance Dance,Haruki Murakami,2.5,2002,M,393,Fiction,borrowed,person
+24,2018,The Yid,Paul Goldberg,2,2016,M,336,Fiction,borrowed,library
+25,2018,In the Land of Armadillos,Helen Maryles Shankman,4,2016,F,304,Short Stories,borrowed,library
+26,2018,The Rehearsal,Eleanor Catton,4,2008,F,312,Fiction,borrowed,library
+27,2018,Brother I'm Dying,Edwidge Danticat,2,2007,F,272,Fiction,mine,bought
+28,2018,The Virgin Suicides,Jeffrey Eugenides,4,1993,M,250,Fiction,borrowed,person
+29,2018,Trumpet,Jackie Kay,3.5,1998,F,278,Fiction,mine,gift
+30,2018,Such Small Hands,Andres Barba,3.5,2008,M,108,Fiction,borrowed,library
+31,2018,"Your Fathers, Where are They? And the Prophets, do They Live Forever?",Dave Eggers,3,2014,M,212,Fiction,borrowed,library
+32,2018,Generation Kill,Edward Wright,4,2004,M,384,Nonfiction,borrowed,library
+33,2018,Sharp Objects,Gillian Flynn,4.5,2006,F,254,Fiction,borrowed,library
+34,2018,Eating the Dinosaur,Chuck Klosterman,4,2009,M,245,Nonfiction,borrowed,library
+35,2018,But What If We��_re Wrong?,Chuck Klosterman,3,2016,M,262,Nonfiction,borrowed,library
+36,2018,You Deserve Nothing,Alexander Maksik,3.5,2011,M,323,Fiction,borrowed,library
+37,2018,The Beach,Alex Garland,3,1996,M,436,Fiction,borrowed,person
+38,2018,A Good and Happy Child,Justin Evans,2,2007,M,336,Fiction,mine,bought
+39,2018,You Were Never Really Here,Jonathan Ames,3.5,2013,M,112,Fiction,borrowed,library
+40,2018,Norse Mythology,Neil Gaiman,4,2017,M,301,Fiction,borrowed,person
+41,2018,Slumberland,Paul Beatty,3.5,2008,M,243,Fiction,mine,bought
+42,2018,Neverwhere,Neil Gaiman,2.5,1996,M,370,Fiction,mine,gift
+43,2018,The Lovely Bones,Alice Sebold,4,2002,F,372,Fiction,borrowed,person
+44,2018,Odysseus Abroad,Amit Chaudhuri,2.5,2014,M,224,Fiction,borrowed,library
+45,2018,X,Chuck Klosterman,4,2017,M,464,Nonfiction,borrowed,library
+46,2018,Midnight Sun,Jo Nesbo,2,2015,M,224,Fiction,borrowed,person
+47,2018,London Fields,Martin Amis,2,1989,M,526,Fiction,borrowed,person
+48,2018,The Helmet of Horror,Victor Pelevin,2.5,2005,M,288,Fiction,mine,bought
+49,2018,The Secret History,Donna Tartt,4.5,1992,F,559,Fiction,mine,gift
+50,2018,Der Vorleser,Bernhard Schlink,3,1995,M,206,Fiction,borrowed,library
+51,2018,Dressed Up for a Riot,Michael Idov,3,2018,M,288,Nonfiction,borrowed,library
+52,2018,Sputnik Sweetheart,Haruki Murakami,2,1999,M,229,Fiction,borrowed,library
+53,2018,Dinner at the Center of the Earth,Nathan Englander,4,2017,M,254,Fiction,borrowed,library
+54,2018,Submission,Michel Houellebecq,2.5,2015,M,246,Fiction,borrowed,library
+55,2018,The Parting Gift,Evan Fallenberg,3.5,2018,M,256,Fiction,mine,bought
+56,2018,The Group,Mary McCarthy,3,1963,F,496,Fiction,borrowed,library
+57,2018,Lost At Sea,Jon Ronson,3.5,2012,M,400,Fiction,borrowed,library
+58,2018,Early Work,Andrew Martin,3.5,2018,M,240,Fiction,borrowed,person
+59,2018,Disgrace,J.M. Coetzee,3,1999,M,220,Fiction,borrowed,library
+60,2018,The Golden Compass,Philip Pullman,4,1995,M,399,Fiction,borrowed,person
+61,2018,Casanova,Matt Fraction,4,2006,M,144,Comic,mine,gift
+62,2018,Umbrella Academy,Gerard Way,4,2007,M,184,Comic,mine,gift
+63,2019,The Vorrh,Brian Catling,3,2012,M,485,Fiction,borrowed,person
+64,2019,The Library Book,Susan Orlean,4,2018,F,317,Nonfiction,mine,gift
+65,2019,City of Glass,Paul Auster,1.5,1985,M,203,Fiction,mine,gift
+66,2019,Hot Pink,Adam Levin,4,2012,M,207,Short Stories,borrowed,library
+67,2019,The Cradle Place,Thomas Lux,3.5,2004,M,80,Poetry,borrowed,library
+68,2019,The White Tiger,Aravind Adiga,3.5,2008,M,276,Fiction,borrowed,person
+69,2019,The Instructions,Adam Levin,4,2010,M,1030,Fiction,borrowed,library
+70,2019,A Little Life,Hanya Yanagihara,3.5,2015,F,720,Fiction,mine,gift
+71,2019,kaddish.com,Nathan Englander,2.5,2019,M,203,Fiction,borrowed,library
+72,2019,Helium,Rudy Francisco,3.5,2017,M,96,Poetry,borrowed,person
+73,2019,A Burglar's Guide to the City,Geoff Manaugh,3,2015,M,296,Nonfiction,mine,gift
+74,2019,Normal,Warren Ellis,3.5,2016,M,148,Fiction,borrowed,library
+75,2019,Gun Machine,Warren Ellis,3.5,2012,M,308,Fiction,borrowed,library
+76,2019,As I Lay Dying,William Faulkner,3,1930,M,288,Fiction,mine,bought
+77,2019,Crooked Little Vein,Warren Ellis,2.5,2007,M,288,Fiction,borrowed,library
+78,2019,Sum,David Eagleman,3,2009,M,110,Short Stories,borrowed,library
+79,2019,Satin Island,Tom McCarthy,2.5,2015,M,192,Fiction,borrowed,library
+80,2019,A Manual for Cleaning Women,Lucia Berlin,3.5,2015,F,406,Short Stories,borrowed,person
+81,2019,Unseen City,Nathanael Johnson,3,2016,M,224,Nonfiction,mine,gift
+82,2019,The Nix,Nathan Hill,3.5,2016,M,640,Fiction,mine,gift
+83,2019,Dog Symphony,Sam Munson,1.5,2018,M,115,Fiction,mine,bought
+84,2019,Killing Yourself to Live,Chuck Klosterman,3.5,2005,M,245,Fiction,mine,bought
+85,2019,Quite Ugly One Morning,Christopher Brookmyre,3.5,1996,M,312,Fiction,borrowed,person
+86,2019,Lanny,Max Porter,4,2019,M,210,Fiction,borrowed,library
+87,2019,Life After Life,Kate Atkinson,4,2013,F,531,Fiction,mine,bought
+88,2019,A God in Ruins,Kate Atkinson,3,2015,F,468,Fiction,mine,gift
+89,2019,A Visit from the Goon Squad,Jennifer Egan,4.5,2010,F,288,Fiction,mine,bought
+90,2019,The Line of Beauty,Alan Hollinghurst,2.5,2004,M,438,Fiction,borrowed,person
+91,2019,For the Relief of Unbearable Urges,Nathan Englander,4,1999,M,205,Short Stories,borrowed,library
+92,2019,The Ministry of Special Cases,Nathan Englander,2.5,2005,M,339,Fiction,mine,bought
+93,2019,Bobcat and Other Stories,Rebecca Lee,4.5,2010,F,209,Short Stories,borrowed,library
+94,2019,On Earth We're Briefly Gorgeous,Ocean Vuong,4,2019,M,246,Fiction,mine,gift
+95,2019,American Innovations,Rivka Galchen,2.5,2014,F,175,Short Stories,borrowed,library
+96,2019,Oryx and Crake,Margaret Atwood,4,2003,F,389,Fiction,borrowed,person
+97,2019,Neuromancer,William Gibson,3,1984,M,292,Fiction,borrowed,person
+98,2020,The Cook,Maylis de Kerangal,3,2016,F,100,Fiction,borrowed,library
+99,2020,Seventeen,Hideo Yokoyama,2.5,2003,M,416,Fiction,borrowed,library
+100,2020,Pattern Recognition,William Gibson,5,2003,M,367,Fiction,mine,bought
+101,2020,Spook Country,William Gibson,3,2007,M,371,Fiction,borrowed,library
+102,2020,Zero History,William Gibson,3,2010,M,404,Fiction,borrowed,library
+103,2020,The Redemption of Galen Pike,Carys Davies,3.5,2014,F,134,Short Stories,borrowed,library
+104,2020,User Friendly,Cliff Kuang,3,2019,M,416,Nonfiction,mine,bought
+105,2020,Dead Stars,Bruce Wagner,2.5,2012,M,604,Fiction,mine,bought
+106,2020,Severance,Ling Ma,3.5,2018,F,291,Fiction,mine,bought
+107,2020,"Interior, Chinatown",Charles Yu,3.5,2020,M,288,Fiction,mine,bought
+108,2020,Boom Town,Sam Anderson,4,2018,M,448,Nonfiction,mine,bought
+109,2020,The Mars Room,Rachel Kushner,3.5,2018,F,338,Fiction,mine,bought
+110,2020,A Tale Etched in Blood and Hard Black Pencil,Christopher Brookmyre,2.5,2006,M,352,Fiction,borrowed,person
+111,2020,The Drowned World,J. G. Ballard,1.5,1962,M,198,Fiction,mine,bought

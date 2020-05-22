@@ -1,0 +1,18 @@
+text {
+    font-family: IBM Plex Mono, monospace;
+    font-size: 12px;
+    fill: #111aaa;
+}
+
+.button {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.show {
+    display: auto;
+}
+
+.hide{
+    display: none;
+}
